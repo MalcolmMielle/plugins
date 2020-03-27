@@ -292,6 +292,8 @@ public class Camera {
     // Create a new capture builder.
     captureRequestBuilder = cameraDevice.createCaptureRequest(templateType);
 
+    setFlashModeRequest(captureRequestBuilder, CAMERA_FLASH_MODE_TORCH);
+
     // Build Flutter surface to render to
     SurfaceTexture surfaceTexture = flutterTexture.surfaceTexture();
     surfaceTexture.setDefaultBufferSize(previewSize.getWidth(), previewSize.getHeight());
